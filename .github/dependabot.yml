@@ -9,6 +9,4 @@ updates:
   - package-ecosystem: pip
     directory: "/"
     schedule:
-      interval: weekly
-      day: saturday
-    versioning-strategy: increase-if-necessary
+      interval: daily
