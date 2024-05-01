@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aioqzone-feed"
-version = "1.2.1.dev4"
+version = "1.2.1.dev5"
 description = "aioqzone plugin that provides higher level apis for processing feeds."
 authors = ["aioqzone <zzzzss990315@gmail.com>"]
 license = "AGPL-3.0"
@@ -25,8 +25,8 @@ slide-captcha = ["slide-tc"]
 optional = false
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.4.0"
-pytest-asyncio = "~0.21.0"
+pytest = "^8.2.0"
+pytest-asyncio = "~0.21.2"
 
 [tool.poetry.group.dev]
 optional = true
