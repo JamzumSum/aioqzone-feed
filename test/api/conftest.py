@@ -53,9 +53,9 @@ def man(request, client: ClientAdapter, env: test_env):
             from PIL import Image as image
 
             man.qr_fetched.add_impl(
-                lambda png, times, qr_renew=False: image.open(io.BytesIO(png)).show()
-                if png
-                else None
+                lambda png, times, qr_renew=False: (
+                    image.open(io.BytesIO(png)).show() if png else None
+                )
             )
 
         return man

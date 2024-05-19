@@ -26,11 +26,11 @@ class FeedH5Api(FeedApiEmitterMixin, HeartbeatApi):
 
     def new_batch(self) -> int:
         """
-        The new_batch function edit internal batch id and return it.
+        The :meth:`new_batch` function edit internal batch id and return it.
 
         A batch id can be used to identify a batch, thus even the same feed can have different id e.g. `(bid, uin, abstime)`.
 
-        :return: The batch_id.
+        :return: An identifier of the new batch.
         """
 
         self.bid = (self.bid + 1) % MAX_BID
@@ -39,20 +39,18 @@ class FeedH5Api(FeedApiEmitterMixin, HeartbeatApi):
     @t.overload
     async def get_feedpage_by_uin(
         self, uin: t.Literal[None] = None, attach_info: t.Optional[str] = None
-    ) -> FeedPageResp:
-        ...
+    ) -> FeedPageResp: ...
 
     @t.overload
     async def get_feedpage_by_uin(
         self, uin: int, attach_info: t.Optional[str] = None
-    ) -> ProfileResp:
-        ...
+    ) -> ProfileResp: ...
 
     async def get_feedpage_by_uin(
         self, uin: t.Optional[int] = None, attach_info: t.Optional[str] = None
     ) -> FeedPageResp:
-        """This method combines :external:meth:`~aioqzone.api.h5.QzoneH5API.get_active_feeds` and
-        :external:meth:`~aioqzone.api.h5.QzoneH5API.get_feeds` , depends on the :obj:`uin` passed in.
+        """This method combines :external+aioqzone:meth:`~aioqzone.api.h5.QzoneH5API.get_active_feeds` and
+        :external+aioqzone:meth:`~aioqzone.api.h5.QzoneH5API.get_feeds` , depends on the :obj:`uin` passed in.
         """
         if not uin:
             return await self.get_active_feeds(attach_info=attach_info)
@@ -142,7 +140,7 @@ class FeedH5Api(FeedApiEmitterMixin, HeartbeatApi):
 
     def drop_rule(self, feed: FEED_TYPES) -> bool:
         """Drop feeds according to some rules.
-        No need to emit :meth:`FeedEvent.FeedDropped` event, it is handled by :meth:`_dispatch_feed`.
+        No need to emit :obj:`.feed_dropped` event, it is handled by :meth:`_dispatch_feed`.
 
         Subclasses may inherit this method to customize their own rules.
 

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aioqzone-feed"
-version = "1.2.1.dev5"
+version = "1.2.1.dev6"
 description = "aioqzone plugin that provides higher level apis for processing feeds."
 authors = ["aioqzone <zzzzss990315@gmail.com>"]
 license = "AGPL-3.0"
@@ -14,7 +14,7 @@ documentation = "https://aioqzone.github.io/aioqzone-feed"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-aioqzone = { version = "^1.8.0.dev1", allow-prereleases = true }
+aioqzone = { version = "^1.8.2.dev3", allow-prereleases = true }
 slide-tc = { version = "~0.1.1", allow-prereleases = true, optional = true }
 
 [tool.poetry.extras]

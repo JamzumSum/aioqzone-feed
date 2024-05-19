@@ -56,6 +56,7 @@ exclude_patterns = []
 #
 html_theme = "furo"
 html_logo = "https://aioqzone.github.io/aioqzone/_static/penguin-blob.webp"
+html_favicon = html_logo
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -66,6 +67,7 @@ html_static_path = ["_static"]
 intersphinx_mapping = {
     "aiohttp": ("https://docs.aiohttp.org/en/stable/", None),
     "tylisten": ("https://JamzumSum.github.io/tylisten", None),
+    "tenacity": ("https://tenacity.readthedocs.io/en/latest/", None),
     "aioqzone": ("https://aioqzone.github.io/aioqzone", None),
 }
 
@@ -74,3 +76,4 @@ autodoc_member_order = "bysource"
 
 # autodoc_pydantic settings
 autodoc_pydantic_model_show_json = False
+autodoc_pydantic_model_undoc_members = False
