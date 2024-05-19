@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aioqzone-feed \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-09 13:55+0800\n"
+"POT-Creation-Date: 2024-05-19 14:18+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.13.1\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/api/heartbeat.rst:2
 msgid "Heartbeat API"
@@ -49,6 +49,20 @@ msgstr ""
 
 #: aioqzone_feed.api.heartbeat.HeartbeatApi.stop:4 of
 msgid ":sphinx_autodoc_typehints_type:`\\:py\\:obj\\:\\`None\\``"
+msgstr ""
+
+#: ../../../docstring aioqzone_feed.api.heartbeat.HeartbeatApi.hb_failed:1 of
+msgid "This emitter is triggered when the heartbeat fails because of a exception."
+msgstr ""
+
+#: ../../../docstring aioqzone_feed.api.heartbeat.HeartbeatApi.hb_refresh:1 of
+msgid ""
+"This emitter is triggered after a heartbeat succeeded and there are new feeds. Use this event to"
+" wait for all dispatch task to be finished, and send received feeds."
+msgstr ""
+
+#: ../../../docstring aioqzone_feed.api.heartbeat.HeartbeatApi.ch_heartbeat_notify:1 of
+msgid "A future store serves as heartbeat channel."
 msgstr ""
 
 #~ msgid ""
@@ -133,4 +147,10 @@ msgstr ""
 #~ "whether the timer is suggested to be stopped, "
 #~ "means heartbeat might not success even after a "
 #~ "retry, until underlying causes are solved."
+#~ msgstr ""
+
+#~ msgid "inherited-members"
+#~ msgstr ""
+
+#~ msgid "QzoneH5API"
 #~ msgstr ""

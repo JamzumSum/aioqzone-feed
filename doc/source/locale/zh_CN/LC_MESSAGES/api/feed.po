@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aioqzone-feed \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-30 22:48+0800\n"
+"POT-Creation-Date: 2024-05-19 14:18+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -17,14 +17,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.15.0\n"
 
 #: ../../source/api/feed.rst:2
 msgid "Feed API"
 msgstr ""
 
 #: aioqzone_feed.api.feed.FeedH5Api.new_batch:1 of
-msgid "The new_batch function edit internal batch id and return it."
+msgid "The :meth:`new_batch` function edit internal batch id and return it."
 msgstr ""
 
 #: aioqzone_feed.api.feed.FeedH5Api.new_batch:3 of
@@ -52,13 +52,14 @@ msgid "返回"
 msgstr ""
 
 #: aioqzone_feed.api.feed.FeedH5Api.new_batch:6 of
-msgid "The batch_id."
+msgid "An identifier of the new batch."
 msgstr ""
 
 #: aioqzone_feed.api.feed.FeedH5Api.get_feedpage_by_uin:1 of
 msgid ""
-"This method combines :external:meth:`~aioqzone.api.h5.QzoneH5API.get_active_feeds` and "
-":external:meth:`~aioqzone.api.h5.QzoneH5API.get_feeds` , depends on the :obj:`uin` passed in."
+"This method combines :external+aioqzone:meth:`~aioqzone.api.h5.QzoneH5API.get_active_feeds` and "
+":external+aioqzone:meth:`~aioqzone.api.h5.QzoneH5API.get_feeds` , depends on the :obj:`uin` "
+"passed in."
 msgstr ""
 
 #: aioqzone_feed.api.feed.FeedH5Api.get_feedpage_by_uin:5 of
@@ -113,8 +114,8 @@ msgstr ""
 
 #: aioqzone_feed.api.feed.FeedH5Api.drop_rule:1 of
 msgid ""
-"Drop feeds according to some rules. No need to emit :meth:`FeedEvent.FeedDropped` event, it is "
-"handled by :meth:`_dispatch_feed`."
+"Drop feeds according to some rules. No need to emit :obj:`.feed_dropped` event, it is handled by"
+" :meth:`_dispatch_feed`."
 msgstr ""
 
 #: aioqzone_feed.api.feed.FeedH5Api.drop_rule:4 of
@@ -131,6 +132,26 @@ msgstr ""
 
 #: aioqzone_feed.api.feed.FeedH5Api.drop_rule:9 of
 msgid "if the feed is dropped."
+msgstr ""
+
+#: ../../../docstring aioqzone_feed.api.feed.FeedH5Api.feed_dropped:1 of
+msgid "This emitter is triggered when a feed is dropped."
+msgstr ""
+
+#: ../../../docstring aioqzone_feed.api.feed.FeedH5Api.feed_processed:1 of
+msgid "This emitter is triggered when a feed is processed."
+msgstr ""
+
+#: ../../../docstring aioqzone_feed.api.feed.FeedH5Api.feed_media_updated:1 of
+msgid "This emitter is triggered when a feed's media is updated."
+msgstr ""
+
+#: ../../../docstring aioqzone_feed.api.feed.FeedH5Api.stop_fetch:1 of
+msgid "This hook is used to determin whether a fetch should stop."
+msgstr ""
+
+#: ../../../docstring aioqzone_feed.api.feed.FeedH5Api.ch_feed_notify:1 of
+msgid "A future store serves as message notify channel."
 msgstr ""
 
 #: aioqzone_feed.api.feed.FeedH5Api.wait:1 of
@@ -271,4 +292,31 @@ msgstr ""
 #~ "This method combines :external+aioqzone:meth:`get_active_feeds` and"
 #~ " :external+aioqzone:meth:`get_feeds` , depends on the "
 #~ ":obj:`uin` passed in."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This method combines "
+#~ ":external:meth:`~aioqzone.api.h5.QzoneH5API.get_active_feeds` and "
+#~ ":external:meth:`~aioqzone.api.h5.QzoneH5API.get_feeds` , depends on "
+#~ "the :obj:`uin` passed in."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This method combines "
+#~ ":external+aioqzone:meth:`~aioqzone.api.h5.QzoneH5API.get_active_feeds` and "
+#~ ":external+aioqzone:meth:`~aioqzone.api.h5.QzoneH5API.get_feeds` , depends "
+#~ "on the :obj:`uin` passed in."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This method combines "
+#~ ":external+aioqzone:ref:`~aioqzone.api.h5.QzoneH5API.get_active_feeds` and "
+#~ ":external+aioqzone:ref:`~aioqzone.api.h5.QzoneH5API.get_feeds` , depends on"
+#~ " the :obj:`uin` passed in."
+#~ msgstr ""
+
+#~ msgid "inherited-members"
+#~ msgstr ""
+
+#~ msgid "QzoneH5API, HeartbeatApi"
 #~ msgstr ""
