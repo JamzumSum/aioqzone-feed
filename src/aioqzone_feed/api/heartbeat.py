@@ -36,6 +36,7 @@ class HeartbeatApi(HeartbeatEmitterMixin, QzoneH5API):
         except RetryError as e:
             if e.last_attempt.failed:
                 e = e.last_attempt.exception()
+                assert e is not None
             log.warning(e)
             self.ch_heartbeat_notify.add_awaitable(self.hb_failed.emit(e))
         except known_exc as e:

@@ -1,4 +1,3 @@
-import asyncio
 import io
 from contextlib import suppress
 from os import environ
@@ -18,7 +17,7 @@ if environ.get("CI") is None:
 class test_env(BaseSettings):
     model_config = SettingsConfigDict(env_prefix="test_")
     uin: int = 0
-    password: SecretStr = Field(default="")
+    password: SecretStr = Field(default=SecretStr(""))
 
 
 @pytest.fixture(scope="session")
@@ -26,22 +25,14 @@ def env():
     return test_env()
 
 
-@pytest.fixture(scope="module")
-def event_loop():
-    loop = asyncio.new_event_loop()
-    yield loop
-    loop.run_until_complete(loop.shutdown_asyncgens())
-    loop.close()
-
-
-@pytest_asyncio.fixture(scope="module")
+@pytest_asyncio.fixture(loop_scope="module")
 async def client():
     async with ClientAdapter() as client:
         yield client
 
 
-@pytest.fixture(params=loginman_list)
-def man(request, client: ClientAdapter, env: test_env):
+@pytest_asyncio.fixture(loop_scope="module", params=loginman_list)
+async def man(request, client: ClientAdapter, env: test_env):
     if request.param == "up":
         return UpLoginManager(client, UpLoginConfig(uin=env.uin, pwd=env.password))
 

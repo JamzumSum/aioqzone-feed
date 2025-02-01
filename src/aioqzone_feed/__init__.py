@@ -1,2 +1,1 @@
-"""aioqzone plugin for handling feeds.
-"""
+"""aioqzone plugin for handling feeds."""

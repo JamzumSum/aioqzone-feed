@@ -8,10 +8,10 @@ from tenacity import RetryError
 
 from aioqzone_feed.api import FeedApi
 
-pytestmark = pytest.mark.asyncio
+pytestmark = pytest.mark.asyncio(scope="module")
 
 
-@pytest_asyncio.fixture
+@pytest_asyncio.fixture(loop_scope="module")
 async def api(client: ClientAdapter, man: Loginable):
     api = FeedApi(client, man)
     yield api
